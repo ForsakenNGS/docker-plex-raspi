@@ -9,4 +9,4 @@ RUN apt-get install -y lsb-release build-essential python3 python3-yaml libass-d
 RUN cd /opt && git clone https://github.com/ForsakenNGS/raspi-plex-transcode.git
 RUN cd /opt/raspi-plex-transcode && export APT_INSTALL_PARAMS="-y" && ./compile.sh && ./install.sh
 ADD "https://api.github.com/repos/ForsakenNGS/raspi-plex-transcode/git/refs/heads/main" /config/GIT_HEAD
-RUN cd /opt/raspi-plex-transcode && export APT_INSTALL_PARAMS="-y" && ./compile.sh
+RUN cd /opt/raspi-plex-transcode && git pull && export APT_INSTALL_PARAMS="-y" && ./compile.sh
