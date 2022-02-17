@@ -22,3 +22,8 @@ services:
       - /dev:/dev
     restart: unless-stopped
 ```
+## Source code
+
+The following project is what acts as a wrapper and forces plex to use the hardware accerlated codec via a wrapper script:
+
+https://github.com/ForsakenNGS/raspi-plex-transcode
